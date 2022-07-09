@@ -3,7 +3,7 @@ from  threading import Thread
 import time, random
 
 SERVER = None
-IP_addressESS = '127.0.0.1'
+ip_addresses = '127.0.0.1'
 PORT = 8000
 
 CLIENTS = {}
@@ -72,11 +72,11 @@ def setup():
 
     global SERVER
     global PORT
-    global IP_addressESS
+    global ip_addresses
 
 
     SERVER = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    SERVER.bind((IP_addressESS, PORT))
+    SERVER.bind((ip_addresses, PORT))
 
     SERVER.listen(10)
 
